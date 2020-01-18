@@ -16,14 +16,14 @@ for k in range(0,iterations):
 		binaryNumberList.insert(0,"0")
 		zeros.append(k)
 
-print(ones)
-print(zeros)
-
 for k in range(0,swaps):
-	if(zeros[k] < ones[k]):
-		binaryNumberList[(iterations - 1) - ones[k]] = "0"
-		binaryNumberList[(iterations - 1) - zeros[k]] = "1"
-	else:
+	try:
+		if(zeros[k] < ones[k]):
+			binaryNumberList[(iterations - 1) - ones[k]] = "0"
+			binaryNumberList[(iterations - 1) - zeros[k]] = "1"
+		else:
+			break
+	except:
 		break
 
 binaryNumber = "".join(binaryNumberList)
